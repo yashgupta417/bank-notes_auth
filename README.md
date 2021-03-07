@@ -3,7 +3,7 @@
 Whenever you go to the bank to deposit some cash money, the cashier places banknotes in a machine which tells whether a banknote is real or not. This is a classification problem where we will be dealing here. We will be given a list of extracted features from the bank note and our task will be to classify it into legal or fraudulent note.
 
 ## Dataset
-The number of instances (rows) in the data set is 1372, and the number of variables (columns) is 5.
+Dataset has been taken from [here](https://archive.ics.uci.edu/ml/datasets/banknote+authentication#).The number of instances (rows) in the data set is 1372, and the number of variables (columns) is 5.
 | f1 | f2 | f3 | f4 | label
 |----|----|----|----|------
 |3.931|1.8541|-0.023425|1.2314|0
@@ -52,7 +52,7 @@ Feature 2\
 Feature 3\
 ![f3](/f3.png)\
 Feature 4\
-![f4](/f4.png)\
+![f4](/f4.png)
 
 Plotting a pair plot to better understand the relationship between the features\
-![Pair plot](/pair_plot.png)\
+![Pair plot](/pair_plot.png)
