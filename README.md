@@ -38,3 +38,7 @@ df_standardized=pd.DataFrame(standardized_features,columns=names[0:4])
 df_standardized=pd.concat([df_standardized,df['label']],axis=1)
 df_standardized
 ```
+
+## Data visualisation
+
+![Pair plot](/pair_plot.png)
