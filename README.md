@@ -126,6 +126,6 @@ Model_2:\
 
 ### ROC
 Model_1:\
-![roc1](/roc1.png)\
+![roc 1](/roc1.png)\
 Model_2:\
-![roc2](/roc2.png)
+![roc 2](/roc2.png)
