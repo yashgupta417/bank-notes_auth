@@ -117,7 +117,7 @@ plot_roc_curve(clf1, X_test, Y_test)
 We trained two models, `clf1` and `clf2`. Now we will look at their results and compare them.
 
 ### Accuracy
-Model_1: 0.84985
+Model_1: 0.84985\
 Model_2: 0.79737
 
 ### Confusion Matrix
@@ -130,4 +130,4 @@ Model_2:\
 Model_1:\
 ![roc1](/roc1.png)\
 Model_2:\
-![roc2](/roc2.png)\
+![roc2](/roc2.png)
