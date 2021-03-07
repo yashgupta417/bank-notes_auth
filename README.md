@@ -52,14 +52,12 @@ df_standardized
 
 ## Data visualisation
 Studying the distribution of features\
-Feature 1\
-![f1](/f1.png)\
-Feature 2\
-![f2](/f2.png)\
-Feature 3\
-![f3](/f3.png)\
-Feature 4\
-![f4](/f4.png)
+Feature 1 | Feature 2
+![f1](/f1.png)| ![f2](/f2.png)
+
+
+Feature 3| Feature 4
+![f3](/f3.png)|![f4](/f4.png)
 
 Plotting a pair plot to better understand the relationship between the features\
 ![Pair plot](/pair_plot.png)
