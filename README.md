@@ -21,3 +21,20 @@ df=pd.read_csv('C:/Users/HP/Desktop/ML/bank-note-auth/data_banknote_authenticati
 df.head()
 ```
 
+## Data pre-processing
+Here we are standardizing the dataset.
+```python
+#standardization
+from sklearn.preprocessing import StandardScaler
+scaler=StandardScaler()
+
+#standardizing features
+standardized_features=scaler.fit_transform(df.drop('label',axis=1))
+
+#creating dataframe of standardized features
+df_standardized=pd.DataFrame(standardized_features,columns=names[0:4])
+
+#concatinating faetures and array
+df_standardized=pd.concat([df_standardized,df['label']],axis=1)
+df_standardized
+```
