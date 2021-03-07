@@ -22,7 +22,7 @@ df.head()
 ```
 
 ## Data pre-processing
-Here we are standardizing the dataset.
+In pre-processing step, we are standardizing the dataset using `StandardScaler` from sklearn.
 ```python
 #standardization
 from sklearn.preprocessing import StandardScaler
@@ -40,7 +40,7 @@ df_standardized
 ```
 
 ## Data visualisation
-Studying the distribution of features\\
+Studying the distribution of features\
 Feature 1\
 ![f1](/f1.png)\
 Feature 2\
