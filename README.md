@@ -4,6 +4,14 @@ Whenever you go to the bank to deposit some cash money, the cashier places bankn
 
 ## Dataset
 The number of instances (rows) in the data set is 1372, and the number of variables (columns) is 5.
+| f1 | f2 | f3 | f4 | label|
+|----|----|----|----|------|
+|3.931|1.8541|-0.023425|1.2314|0|
+|0.01727|8.693|1.3989|-3.9668|0|
+|3.2414|0.40971|1.4015|1.1952|0|
+|2.2504|3.5757|0.35273|0.2836|0|
+|-1.3971|3.3191|-1.3927|-1.9948|1|
+|0.39012|-0.14279|-0.031994|0.35084|1|
 
 In this code snippet, we are reading the dataset
 ```python
