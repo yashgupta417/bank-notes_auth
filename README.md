@@ -1,6 +1,6 @@
 # bank-notes_auth
 
-Whenever you go to the bank to deposit some cash money, the cashier places banknotes in a machine which tells whether a banknote is real or not. This is a classification problem where we will be dealing here. We will be given a list of extracted features from the bank note and our task will be to classify it into legal or fraudulent note.
+Whenever you go to the bank to deposit some cash money, the cashier places banknotes in a machine which tells whether a banknote is real or not. This is a classification problem which we will be dealing here. We will be given a list of extracted features from the bank note and our task will be to classify it into legal or fraudulent note.
 
 ## To Run
 To run the model locally, fist clone the repository using following command in your terminal.
