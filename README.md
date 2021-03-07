@@ -40,7 +40,7 @@ df_standardized
 ```
 
 ## Data visualisation
-Studying the distribution of features
+Studying the distribution of features\\
 Feature 1\
 ![f1](/f1.png)\
 Feature 2\
