@@ -2,8 +2,15 @@
 
 Whenever you go to the bank to deposit some cash money, the cashier places banknotes in a machine which tells whether a banknote is real or not. This is a classification problem where we will be dealing here. We will be given a list of extracted features from the bank note and our task will be to classify it into legal or fraudulent note.
 
+## To Run
+To run the model locally, fist clone the repository using following command in your terminal.
+```
+git clone https://github.com/yashgupta417/bank-notes_auth.git
+```
+Then, open the `model.ipynb` file using jupyter notebook and press run.
+
 ## Dataset
-Dataset has been taken from [here](https://archive.ics.uci.edu/ml/datasets/banknote+authentication#).The number of instances (rows) in the data set is 1372, and the number of variables (columns) is 5.
+Dataset has been taken from [here](https://archive.ics.uci.edu/ml/datasets/banknote+authentication#). The number of instances (rows) in the data set is 1372, and the number of variables (columns) is 5.
 | f1 | f2 | f3 | f4 | label
 |----|----|----|----|------
 |3.931|1.8541|-0.023425|1.2314|0
@@ -56,3 +63,71 @@ Feature 4\
 
 Plotting a pair plot to better understand the relationship between the features\
 ![Pair plot](/pair_plot.png)
+
+
+## Training Model
+Now, we are training `GaussianNB` model on the given dataset. We are training two models which differentiate on their prior probabilities. Model_1 is having `priors=[0.5,0.5]`
+while on the other hand Model_2 is having `priors=[0.1,0.9]`.
+
+Model_1:
+```python
+#training a gaussian naive bayes classifier
+
+from sklearn.naive_bayes import GaussianNB
+clf1=GaussianNB(priors=[0.5,0.5])
+clf1.fit(X_train, Y_train)
+```
+
+Model_2:
+```python
+#training model with prior probablities [0.1,0.9]
+clf2=GaussianNB(priors=[0.1,0.9])
+clf2.fit(X_train, Y_train)
+```
+## Evaluating Model
+Here we are evaluating model on various measures available in `sklearn.metrics`.
+```python
+#evalutating test dataset
+Y_pred1=clf1.predict(X_test)
+
+#accuracy
+from sklearn.metrics import accuracy_score,classification_report
+acc1=accuracy_score(Y_test, Y_pred1)
+print("Accuracy of model1: ",acc1)
+
+#classification report
+report=classification_report(Y_test,Y_pred1)
+print("\nClassification report: \n",report)
+
+#confusion matrix
+from sklearn.metrics import plot_confusion_matrix
+cm=plot_confusion_matrix(clf1,X_test,Y_test)
+
+cm.figure_.suptitle("Confusion Matrix")
+plt.show()
+```
+
+Now plotting ROC curve
+```python
+#plotting ROC curve
+plot_roc_curve(clf1, X_test, Y_test)
+```
+
+## Model Comparison
+We trained two models, `clf1` and `clf2`. Now we will look at their results and compare them.
+
+### Accuracy
+Model_1: 0.84985
+Model_2: 0.79737
+
+### Confusion Matrix
+Model_1:\
+![cm1](/cm1.png)\
+Model_2:\
+![cm2](/cm2.png)
+
+### ROC
+Model_1:\
+![roc1](/roc1.png)\
+Model_2:\
+![roc2](/roc2.png)\
